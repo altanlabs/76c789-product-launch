@@ -39,7 +39,7 @@ const ProductLaunch = () => {
   ];
 
   return (
-    <div className="bg-white">
+    <main className="relative bg-white">
       {/* Fixed Countdown Banner */}
       <motion.div 
         initial={{ y: -100 }}
@@ -56,29 +56,22 @@ const ProductLaunch = () => {
       </motion.div>
 
       {/* Hero Section */}
-      <section className="min-h-screen relative flex items-center justify-center pt-24">
-        <div className="absolute inset-0 z-0">
+      <section className="relative min-h-[80vh] flex items-center justify-center pt-20">
+        <div className="absolute inset-0">
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1.5 }}
             className="absolute inset-0 bg-gradient-to-b from-blue-100/80 via-white/50 to-white"
-          ></motion.div>
-          <motion.div
-            initial={{ scale: 1.1 }}
-            animate={{ scale: 1 }}
-            transition={{ duration: 1.5 }}
-            className="h-full"
-          >
-            <img 
-              src="https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?auto=format&fit=crop&q=80"
-              alt="Background"
-              className="w-full h-full object-cover object-center"
-            />
-          </motion.div>
+          />
+          <img 
+            src="https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?auto=format&fit=crop&q=80"
+            alt="Background"
+            className="w-full h-full object-cover object-center"
+          />
         </div>
 
-        <div className="container mx-auto px-4 relative z-10">
+        <div className="container relative mx-auto px-4 z-10">
           <div className="text-center">
             <motion.div
               initial={{ y: -20, opacity: 0 }}
@@ -107,7 +100,7 @@ const ProductLaunch = () => {
       </section>
 
       {/* Product Preview Section */}
-      <section className="py-20 bg-gradient-to-b from-white to-blue-50">
+      <section className="relative py-20 bg-gradient-to-b from-white to-blue-50">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-16 text-gray-900" data-aos="fade-up">
             Experience the Future
@@ -121,7 +114,7 @@ const ProductLaunch = () => {
                 <img 
                   src="https://images.unsplash.com/photo-1545454675-3531b543be5d?auto=format&fit=crop&q=80" 
                   alt="Echo Sphere Front View"
-                  className="w-full h-full object-cover"
+                  className="w-full h-[400px] object-cover"
                 />
               </motion.div>
             </div>
@@ -133,7 +126,7 @@ const ProductLaunch = () => {
                 <img 
                   src="https://images.unsplash.com/photo-1613685303213-1f2a7215a0e9?auto=format&fit=crop&q=80" 
                   alt="Echo Sphere Lifestyle"
-                  className="w-full h-full object-cover"
+                  className="w-full h-[400px] object-cover"
                 />
               </motion.div>
             </div>
@@ -142,7 +135,7 @@ const ProductLaunch = () => {
       </section>
 
       {/* Features Section */}
-      <section className="py-20 bg-white">
+      <section className="relative py-20 bg-white">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-16 text-gray-900" data-aos="fade-up">
             Revolutionary Features
@@ -187,7 +180,7 @@ const ProductLaunch = () => {
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-20 bg-blue-50">
+      <section className="relative py-20 bg-blue-50">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-16 text-gray-900" data-aos="fade-up">
             Early Access Reviews
@@ -209,7 +202,7 @@ const ProductLaunch = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-white">
+      <section className="relative py-20 bg-white">
         <div className="container mx-auto px-4">
           <motion.div
             className="max-w-3xl mx-auto text-center"
@@ -226,7 +219,7 @@ const ProductLaunch = () => {
           </motion.div>
         </div>
       </section>
-    </div>
+    </main>
   );
 };
 
