@@ -8,123 +8,145 @@ const ProductLaunch = () => {
 
   const testimonials = [
     {
-      content: "This product has completely transformed how I work. Can't wait for the full release!",
+      content: "The sound quality is incredible. The spatial audio feature makes you feel like you're in a concert hall.",
       author: "Sarah Johnson",
-      role: "Product Designer",
-      image: "https://i.pravatar.cc/150?img=1"
+      role: "Audio Engineer",
+      image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150"
     },
     {
-      content: "The beta version already exceeded my expectations. This is going to be a game-changer.",
+      content: "As a smart home enthusiast, this is the missing piece I've been waiting for. The integration is seamless.",
       author: "Michael Chen",
-      role: "Tech Lead",
-      image: "https://i.pravatar.cc/150?img=2"
+      role: "Tech Reviewer",
+      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150"
     },
     {
-      content: "Incredibly intuitive and powerful. Looking forward to the launch!",
+      content: "The design is stunning, and the voice recognition is the most accurate I've ever tested.",
       author: "Emma Davis",
-      role: "Marketing Director",
-      image: "https://i.pravatar.cc/150?img=3"
+      role: "Product Designer",
+      image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150"
     }
   ];
 
   return (
-    <div className="container mx-auto px-4 py-12">
+    <div className="bg-white">
       {/* Hero Section */}
-      <section className="text-center mb-16">
-        <h1 className="text-4xl md:text-6xl font-bold mb-6">
-          The Future of <span className="text-primary">Innovation</span>
-        </h1>
-        <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-          Get ready for a revolutionary product that will transform the way you work.
-          Sign up now for exclusive early access.
-        </p>
-        <div className="max-w-md mx-auto mb-12">
-          <SignupForm />
+      <section className="relative h-screen flex items-center justify-center overflow-hidden bg-gradient-to-b from-blue-50 to-white">
+        <div className="absolute inset-0 z-0">
+          <div className="absolute inset-0 bg-gradient-to-r from-blue-50/80 to-white/80 backdrop-blur-sm"></div>
+          <img 
+            src="https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?auto=format&fit=crop&q=80"
+            alt="Background"
+            className="w-full h-full object-cover"
+          />
+        </div>
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="text-center max-w-3xl mx-auto">
+            <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-indigo-600">
+              Echo Sphere
+            </h1>
+            <p className="text-xl md:text-2xl text-gray-700 mb-8 max-w-2xl mx-auto">
+              Experience sound like never before with our next-generation smart speaker.
+              Where artificial intelligence meets acoustic perfection.
+            </p>
+            <div className="max-w-md mx-auto mb-12">
+              <SignupForm />
+            </div>
+          </div>
         </div>
       </section>
 
       {/* Countdown Section */}
-      <section className="mb-16">
-        <h2 className="text-2xl font-bold text-center mb-8">Launching In</h2>
+      <section className="py-20 bg-white">
+        <h2 className="text-2xl font-bold text-center mb-8 text-gray-900">Launch Countdown</h2>
         <div className="max-w-lg mx-auto">
           <CountdownTimer date={launchDate} />
         </div>
       </section>
 
       {/* Product Preview Section */}
-      <section className="mb-16">
-        <h2 className="text-2xl font-bold text-center mb-8">Product Preview</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div className="aspect-video bg-muted rounded-lg overflow-hidden">
-            <img 
-              src="https://placehold.co/600x400/png" 
-              alt="Product preview 1"
-              className="w-full h-full object-cover"
-            />
-          </div>
-          <div className="aspect-video bg-muted rounded-lg overflow-hidden">
-            <img 
-              src="https://placehold.co/600x400/png" 
-              alt="Product preview 2"
-              className="w-full h-full object-cover"
-            />
+      <section className="py-20 bg-gradient-to-b from-white to-blue-50">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold text-center mb-16 text-gray-900">Experience the Future</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+            <div className="rounded-2xl overflow-hidden shadow-2xl">
+              <img 
+                src="https://images.unsplash.com/photo-1545454675-3531b543be5d?auto=format&fit=crop&q=80" 
+                alt="Echo Sphere Front View"
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <div className="rounded-2xl overflow-hidden shadow-2xl">
+              <img 
+                src="https://images.unsplash.com/photo-1613685303213-1f2a7215a0e9?auto=format&fit=crop&q=80" 
+                alt="Echo Sphere Lifestyle"
+                className="w-full h-full object-cover"
+              />
+            </div>
           </div>
         </div>
       </section>
 
       {/* Features Section */}
-      <section className="mb-16">
-        <h2 className="text-2xl font-bold text-center mb-8">Key Features</h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div className="text-center">
-            <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-              <svg className="w-8 h-8 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-              </svg>
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold text-center mb-16 text-gray-900">Revolutionary Features</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+            <div className="text-center">
+              <div className="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                <svg className="w-10 h-10 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-semibold mb-4 text-gray-900">360° Spatial Audio</h3>
+              <p className="text-gray-600">Room-filling sound that adapts to your space</p>
             </div>
-            <h3 className="font-semibold mb-2">Lightning Fast</h3>
-            <p className="text-muted-foreground">Experience unprecedented speed and efficiency</p>
-          </div>
-          <div className="text-center">
-            <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-              <svg className="w-8 h-8 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
-              </svg>
+            <div className="text-center">
+              <div className="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                <svg className="w-10 h-10 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-semibold mb-4 text-gray-900">AI Voice Recognition</h3>
+              <p className="text-gray-600">Understands context and natural language</p>
             </div>
-            <h3 className="font-semibold mb-2">Secure</h3>
-            <p className="text-muted-foreground">Bank-grade security for your peace of mind</p>
-          </div>
-          <div className="text-center">
-            <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-              <svg className="w-8 h-8 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4" />
-              </svg>
+            <div className="text-center">
+              <div className="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                <svg className="w-10 h-10 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-semibold mb-4 text-gray-900">Smart Home Hub</h3>
+              <p className="text-gray-600">Controls all your smart devices effortlessly</p>
             </div>
-            <h3 className="font-semibold mb-2">Customizable</h3>
-            <p className="text-muted-foreground">Tailor the experience to your needs</p>
           </div>
         </div>
       </section>
 
       {/* Testimonials Section */}
-      <section className="mb-16">
-        <h2 className="text-2xl font-bold text-center mb-8">What Beta Users Say</h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {testimonials.map((testimonial, index) => (
-            <TestimonialCard key={index} {...testimonial} />
-          ))}
+      <section className="py-20 bg-blue-50">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold text-center mb-16 text-gray-900">Early Access Reviews</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {testimonials.map((testimonial, index) => (
+              <TestimonialCard key={index} {...testimonial} />
+            ))}
+          </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="text-center">
-        <h2 className="text-3xl font-bold mb-4">Be Among the First</h2>
-        <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-          Don't miss out on the opportunity to be part of something revolutionary.
-          Sign up now for early access and exclusive benefits.
-        </p>
-        <div className="max-w-md mx-auto">
-          <SignupForm />
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="max-w-3xl mx-auto text-center">
+            <h2 className="text-4xl font-bold mb-6 text-gray-900">Join the Revolution</h2>
+            <p className="text-xl text-gray-600 mb-8">
+              Be among the first to experience the future of sound. 
+              Early access members receive exclusive benefits and special pricing.
+            </p>
+            <div className="max-w-md mx-auto">
+              <SignupForm />
+            </div>
+          </div>
         </div>
       </section>
     </div>
