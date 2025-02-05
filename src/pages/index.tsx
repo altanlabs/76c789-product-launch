@@ -40,8 +40,23 @@ const ProductLaunch = () => {
 
   return (
     <div className="bg-white">
-      {/* Countdown Hero Section */}
-      <section className="min-h-screen relative flex items-center justify-center py-20">
+      {/* Fixed Countdown Banner */}
+      <motion.div 
+        initial={{ y: -100 }}
+        animate={{ y: 0 }}
+        transition={{ duration: 0.6, ease: "easeOut" }}
+        className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md shadow-md"
+      >
+        <div className="container mx-auto px-4 py-2">
+          <div className="flex justify-center items-center gap-4">
+            <span className="text-sm font-medium text-gray-600">Launch in:</span>
+            <CountdownTimer date={launchDate} />
+          </div>
+        </div>
+      </motion.div>
+
+      {/* Hero Section */}
+      <section className="min-h-screen relative flex items-center justify-center pt-24">
         <div className="absolute inset-0 z-0">
           <motion.div
             initial={{ opacity: 0 }}
@@ -75,17 +90,8 @@ const ProductLaunch = () => {
                 Echo Sphere
               </h1>
               <p className="text-xl md:text-2xl text-gray-700 max-w-2xl mx-auto">
-                The future of sound arrives in
+                Experience sound like never before with our next-generation smart speaker.
               </p>
-            </motion.div>
-
-            <motion.div
-              initial={{ y: 20, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              transition={{ delay: 0.8 }}
-              className="mb-12"
-            >
-              <CountdownTimer date={launchDate} />
             </motion.div>
 
             <motion.div
