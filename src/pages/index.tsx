@@ -39,35 +39,35 @@ const ProductLaunch = () => {
   ];
 
   return (
-    <main className="relative bg-white">
+    <div className="bg-black text-white">
       {/* Fixed Countdown Banner */}
       <motion.div 
         initial={{ y: -100 }}
         animate={{ y: 0 }}
         transition={{ duration: 0.6, ease: "easeOut" }}
-        className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md shadow-md"
+        className="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-md border-b border-zinc-800"
       >
         <div className="container mx-auto px-4 py-2">
           <div className="flex justify-center items-center gap-4">
-            <span className="text-sm font-medium text-gray-600">Launch in:</span>
+            <span className="text-sm font-medium text-zinc-400">Launch in:</span>
             <CountdownTimer date={launchDate} />
           </div>
         </div>
       </motion.div>
 
       {/* Hero Section */}
-      <section className="relative min-h-[80vh] flex items-center justify-center pt-20">
+      <section className="relative min-h-screen flex items-center justify-center pt-20">
         <div className="absolute inset-0">
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1.5 }}
-            className="absolute inset-0 bg-gradient-to-b from-blue-100/80 via-white/50 to-white"
+            className="absolute inset-0 bg-gradient-to-b from-black/90 via-black/50 to-black"
           />
           <img 
             src="https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?auto=format&fit=crop&q=80"
             alt="Background"
-            className="w-full h-full object-cover object-center"
+            className="w-full h-full object-cover object-center opacity-50"
           />
         </div>
 
@@ -79,10 +79,10 @@ const ProductLaunch = () => {
               transition={{ delay: 0.5 }}
               className="mb-8"
             >
-              <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-indigo-600">
+              <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-zinc-200 to-zinc-500">
                 Echo Sphere
               </h1>
-              <p className="text-xl md:text-2xl text-gray-700 max-w-2xl mx-auto">
+              <p className="text-xl md:text-2xl text-zinc-400 max-w-2xl mx-auto">
                 Experience sound like never before with our next-generation smart speaker.
               </p>
             </motion.div>
@@ -100,13 +100,13 @@ const ProductLaunch = () => {
       </section>
 
       {/* Product Preview Section */}
-      <section className="relative py-20 bg-gradient-to-b from-white to-blue-50">
+      <section className="relative py-32 bg-zinc-900">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-16 text-gray-900" data-aos="fade-up">
+          <h2 className="text-3xl font-bold text-center mb-16 text-zinc-100" data-aos="fade-up">
             Experience the Future
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-            <div className="rounded-2xl overflow-hidden shadow-2xl" data-aos="fade-right">
+            <div className="rounded-2xl overflow-hidden border border-zinc-800" data-aos="fade-right">
               <motion.div
                 whileHover={{ scale: 1.02 }}
                 transition={{ duration: 0.3 }}
@@ -118,7 +118,7 @@ const ProductLaunch = () => {
                 />
               </motion.div>
             </div>
-            <div className="rounded-2xl overflow-hidden shadow-2xl" data-aos="fade-left">
+            <div className="rounded-2xl overflow-hidden border border-zinc-800" data-aos="fade-left">
               <motion.div
                 whileHover={{ scale: 1.02 }}
                 transition={{ duration: 0.3 }}
@@ -135,9 +135,9 @@ const ProductLaunch = () => {
       </section>
 
       {/* Features Section */}
-      <section className="relative py-20 bg-white">
+      <section className="relative py-32 bg-black">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-16 text-gray-900" data-aos="fade-up">
+          <h2 className="text-3xl font-bold text-center mb-16 text-zinc-100" data-aos="fade-up">
             Revolutionary Features
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
@@ -166,13 +166,13 @@ const ProductLaunch = () => {
                 whileHover={{ y: -5 }}
                 transition={{ duration: 0.3 }}
               >
-                <div className="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <svg className="w-10 h-10 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <div className="w-20 h-20 bg-zinc-900 rounded-full flex items-center justify-center mx-auto mb-6 border border-zinc-800">
+                  <svg className="w-10 h-10 text-zinc-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d={feature.icon} />
                   </svg>
                 </div>
-                <h3 className="text-xl font-semibold mb-4 text-gray-900">{feature.title}</h3>
-                <p className="text-gray-600">{feature.description}</p>
+                <h3 className="text-xl font-semibold mb-4 text-zinc-100">{feature.title}</h3>
+                <p className="text-zinc-400">{feature.description}</p>
               </motion.div>
             ))}
           </div>
@@ -180,9 +180,9 @@ const ProductLaunch = () => {
       </section>
 
       {/* Testimonials Section */}
-      <section className="relative py-20 bg-blue-50">
+      <section className="relative py-32 bg-zinc-900">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-16 text-gray-900" data-aos="fade-up">
+          <h2 className="text-3xl font-bold text-center mb-16 text-zinc-100" data-aos="fade-up">
             Early Access Reviews
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -202,14 +202,14 @@ const ProductLaunch = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="relative py-20 bg-white">
+      <section className="relative py-32 bg-black">
         <div className="container mx-auto px-4">
           <motion.div
             className="max-w-3xl mx-auto text-center"
             data-aos="fade-up"
           >
-            <h2 className="text-4xl font-bold mb-6 text-gray-900">Join the Revolution</h2>
-            <p className="text-xl text-gray-600 mb-8">
+            <h2 className="text-4xl font-bold mb-6 text-zinc-100">Join the Revolution</h2>
+            <p className="text-xl text-zinc-400 mb-8">
               Be among the first to experience the future of sound. 
               Early access members receive exclusive benefits and special pricing.
             </p>
@@ -219,7 +219,7 @@ const ProductLaunch = () => {
           </motion.div>
         </div>
       </section>
-    </main>
+    </div>
   );
 };
 
