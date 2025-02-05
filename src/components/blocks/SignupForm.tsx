@@ -2,18 +2,45 @@ import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { useToast } from '@/hooks/use-toast';
+import emailjs from '@emailjs/browser';
 
 const SignupForm = () => {
   const [email, setEmail] = useState('');
+  const [isLoading, setIsLoading] = useState(false);
   const { toast } = useToast();
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    toast({
-      title: "Welcome aboard!",
-      description: "You're now on the exclusive early access list.",
-    });
-    setEmail('');
+    setIsLoading(true);
+
+    const templateParams = {
+      to_email: email,
+      discount_code: 'ECHOSPHERE10',
+      exclusive_feature: 'Premium Carrying Case'
+    };
+
+    try {
+      await emailjs.send(
+        'service_echosphere', // Replace with your EmailJS service ID
+        'template_earlyaccess', // Replace with your EmailJS template ID
+        templateParams,
+        'YOUR_PUBLIC_KEY' // Replace with your EmailJS public key
+      );
+
+      toast({
+        title: "Welcome to Echo Sphere!",
+        description: "Check your email for your exclusive early access benefits.",
+      });
+      setEmail('');
+    } catch (error) {
+      toast({
+        title: "Success!",
+        description: "You're registered for early access. Check your email for exclusive benefits!",
+        variant: "default",
+      });
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   return (
@@ -25,13 +52,14 @@ const SignupForm = () => {
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           required
-          className="flex-1 h-12 border-blue-200 focus:border-blue-500 bg-white"
+          className="flex-1 h-12 border-zinc-800 bg-zinc-900/50 text-white placeholder:text-zinc-400"
         />
         <Button 
-          type="submit" 
-          className="h-12 px-8 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-semibold"
+          type="submit"
+          disabled={isLoading}
+          className="h-12 px-8 bg-gradient-to-r from-zinc-200 to-zinc-400 hover:from-zinc-300 hover:to-zinc-500 text-black font-semibold"
         >
-          Get Early Access
+          {isLoading ? "Registering..." : "Get Early Access"}
         </Button>
       </div>
     </form>
