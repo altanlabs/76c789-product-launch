@@ -112,7 +112,7 @@ const ProductLaunch = () => {
                 transition={{ duration: 0.3 }}
               >
                 <img 
-                  src="https://images.unsplash.com/photo-1595433707802-6b2626ef1c91?auto=format&fit=crop&q=80" 
+                  src="https://images.unsplash.com/photo-1545454675-3531b543be5d?auto=format&fit=crop&q=80" 
                   alt="Echo Sphere Front View"
                   className="w-full h-[400px] object-cover"
                 />
@@ -124,51 +124,9 @@ const ProductLaunch = () => {
                 transition={{ duration: 0.3 }}
               >
                 <img 
-                  src="https://images.unsplash.com/photo-1545454675-3531b543be5d?auto=format&fit=crop&q=80" 
+                  src="https://images.unsplash.com/photo-1511379938547-c1f69419868d?auto=format&fit=crop&q=80" 
                   alt="Echo Sphere Lifestyle"
                   className="w-full h-[400px] object-cover"
-                />
-              </motion.div>
-            </div>
-          </div>
-        </div>
-
-        {/* Additional Product Shots */}
-        <div className="container mx-auto px-4 mt-16">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="rounded-xl overflow-hidden border border-zinc-800" data-aos="fade-up">
-              <motion.div
-                whileHover={{ scale: 1.02 }}
-                transition={{ duration: 0.3 }}
-              >
-                <img 
-                  src="https://images.unsplash.com/photo-1506760610100-bd37e6c2a30b?auto=format&fit=crop&q=80" 
-                  alt="Echo Sphere Detail"
-                  className="w-full h-[250px] object-cover"
-                />
-              </motion.div>
-            </div>
-            <div className="rounded-xl overflow-hidden border border-zinc-800" data-aos="fade-up" data-aos-delay="100">
-              <motion.div
-                whileHover={{ scale: 1.02 }}
-                transition={{ duration: 0.3 }}
-              >
-                <img 
-                  src="https://images.unsplash.com/photo-1547099037-5cc69fe1f489?auto=format&fit=crop&q=80" 
-                  alt="Echo Sphere Ambient"
-                  className="w-full h-[250px] object-cover"
-                />
-              </motion.div>
-            </div>
-            <div className="rounded-xl overflow-hidden border border-zinc-800" data-aos="fade-up" data-aos-delay="200">
-              <motion.div
-                whileHover={{ scale: 1.02 }}
-                transition={{ duration: 0.3 }}
-              >
-                <img 
-                  src="https://images.unsplash.com/photo-1511379938547-c1f69419868d?auto=format&fit=crop&q=80" 
-                  alt="Echo Sphere Studio"
-                  className="w-full h-[250px] object-cover"
                 />
               </motion.div>
             </div>
